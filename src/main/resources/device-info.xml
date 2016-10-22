@@ -1,0 +1,14 @@
+<bridge>
+    <label>mGavlovy HomeKit bridge</label>
+    <manufacturer>Maksym Gavlovych</manufacturer>
+    <model>RaspiBridge</model>
+    <serial>001</serial>
+    <port>9123</port>
+    <device>
+        <id>421994</id>
+        <label>Window Covering</label>
+        <manufacturer>Maksym Gavlovych</manufacturer>
+        <model>RaspiBridge</model>
+        <serial>001</serial>
+    </device>
+</bridge>
