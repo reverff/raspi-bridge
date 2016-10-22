@@ -3,6 +3,7 @@
     <manufacturer>Maksym Gavlovych</manufacturer>
     <model>RaspiBridge</model>
     <serial>001</serial>
+    <host>192.168.1.50</host>
     <port>9123</port>
     <device>
         <id>421994</id>

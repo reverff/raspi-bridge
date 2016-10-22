@@ -49,9 +49,11 @@ public class WindowCoveringComponent implements WindowCovering {
     @Override
     public CompletableFuture<Void> setTargetPosition(int i) throws Exception {
         this.targetPosition = i;
-        setChanged(tarPosCallback);
-        state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING : WindowCoveringPositionState.DECREASING;
-        setChanged(posStateCallback);
+        if (targetPosition != currentPosition) {
+            setChanged(tarPosCallback);
+            state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING : WindowCoveringPositionState.DECREASING;
+            setChanged(posStateCallback);
+        }
         return CompletableFuture.runAsync(go);
     }
 
