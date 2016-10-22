@@ -102,7 +102,7 @@ public class WindowCoveringComponent implements WindowCovering {
 
     @Override
     public int getId() {
-        return 10;
+        return 421994;
     }
 
     @Override
