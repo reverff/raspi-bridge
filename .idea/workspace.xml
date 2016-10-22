@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ddaf5ad-3ac2-4089-b8f0-e8ee10003137" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java" afterPath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java" afterPath="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hap-sample.iws" />
@@ -29,36 +30,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WindowCoveringComponent.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WindowCoveringComponent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1382" max-vertical-offset="2142">
-              <caret line="138" column="78" selection-start-line="138" selection-start-column="78" selection-end-line="138" selection-end-column="78" />
+            <state vertical-scroll-proportion="4.1808944" vertical-offset="0" max-vertical-offset="2227">
+              <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
               <folding>
-                <element signature="e#3199#3200#0" expanded="true" />
-                <element signature="e#3241#3242#0" expanded="true" />
-                <element signature="e#3868#3869#0" expanded="true" />
-                <element signature="e#3897#3898#0" expanded="true" />
+                <element signature="e#3237#3238#0" expanded="true" />
+                <element signature="e#3279#3280#0" expanded="true" />
+                <element signature="e#3906#3907#0" expanded="true" />
+                <element signature="e#3935#3936#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java">
+      <file leaf-file-name="CompletableFuture.class" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/jre/lib/rt.jar!/java/util/concurrent/CompletableFuture.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27642277" vertical-offset="0" max-vertical-offset="493">
-              <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+            <state vertical-scroll-proportion="-5.3103447" vertical-offset="21130" max-vertical-offset="36567">
+              <caret line="1283" column="42" selection-start-line="1283" selection-start-column="42" selection-end-line="1283" selection-end-column="42" />
+              <folding>
+                <element signature="e#46881#46882#0" expanded="true" />
+                <element signature="e#46934#46935#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StepperMotorService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="833">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+              <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -133,16 +147,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="519" max-vertical-offset="1207">
-              <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,11 +170,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorGpioExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/RaspiBridgeAuthInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java" />
       </list>
     </option>
   </component>
@@ -382,7 +386,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -767,7 +771,7 @@
       <option name="number" value="Default" />
       <updated>1476528384543</updated>
       <workItem from="1477143790705" duration="3120000" />
-      <workItem from="1477149233102" duration="11945000" />
+      <workItem from="1477149233102" duration="13615000" />
     </task>
     <task id="LOCAL-00001" summary="test build">
       <created>1477149361356</created>
@@ -841,11 +845,17 @@
       <option name="project" value="LOCAL" />
       <updated>1477163303984</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add interface for motor">
+      <created>1477164378679</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1477164378679</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15065000" />
+    <option name="totallyTimeSpent" value="16735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -866,11 +876,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -914,10 +924,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="2074">
           <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
-            <element signature="e#3199#3200#0" expanded="true" />
-            <element signature="e#3241#3242#0" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+            <element signature="e#3906#3907#0" expanded="true" />
+            <element signature="e#3935#3936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -995,10 +1005,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2839">
           <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding>
-            <element signature="e#3199#3200#0" expanded="true" />
-            <element signature="e#3241#3242#0" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+            <element signature="e#3906#3907#0" expanded="true" />
+            <element signature="e#3935#3936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1090,14 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="329" max-vertical-offset="833">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="519" max-vertical-offset="1207">
@@ -1159,19 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1382" max-vertical-offset="2142">
-          <caret line="138" column="78" selection-start-line="138" selection-start-column="78" selection-end-line="138" selection-end-column="78" />
-          <folding>
-            <element signature="e#3199#3200#0" expanded="true" />
-            <element signature="e#3241#3242#0" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/RaspiBridgeAuthInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="545" max-vertical-offset="1241">
@@ -1186,9 +1175,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27642277" vertical-offset="0" max-vertical-offset="493">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
           <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/StepperMotorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="833">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/jre/lib/rt.jar!/java/util/concurrent/CompletableFuture.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3103447" vertical-offset="21130" max-vertical-offset="36567">
+          <caret line="1283" column="42" selection-start-line="1283" selection-start-column="42" selection-end-line="1283" selection-end-column="42" />
+          <folding>
+            <element signature="e#46881#46882#0" expanded="true" />
+            <element signature="e#46934#46935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beowulfe/hap/sample/WindowCoveringComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.1808944" vertical-offset="0" max-vertical-offset="2227">
+          <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
+          <folding>
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+            <element signature="e#3906#3907#0" expanded="true" />
+            <element signature="e#3935#3936#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

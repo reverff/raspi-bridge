@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 public class StepperMotorService {
     private static final Logger log = Logger.getLogger(StepperMotorService.class);
     private static StepperMotorService instance;
-    private static int STEPS_FOR_COMPLETE = 2038;
+    private static Double STEPS_FOR_COMPLETE = 2038D;
     private GpioStepperMotorComponent motor;
 
     private StepperMotorService() {
@@ -29,7 +29,7 @@ public class StepperMotorService {
 
         motor.setStepInterval(2);
         motor.setStepSequence(single_step_sequence);
-        motor.setStepsPerRevolution(STEPS_FOR_COMPLETE);
+        motor.setStepsPerRevolution(STEPS_FOR_COMPLETE.intValue());
     }
 
     public static StepperMotorService getInstance() {
@@ -38,9 +38,9 @@ public class StepperMotorService {
     }
 
     public void rotate(int delta) {
-        int stepCount = STEPS_FOR_COMPLETE / 100 * delta;
-        log.info("Step count for this time: " + stepCount);
-        motor.step(stepCount);
+        Double stepCount = STEPS_FOR_COMPLETE / 100 * delta;
+        log.info("Step count for this time: " + stepCount.intValue());
+        motor.step(stepCount.intValue());
     }
 
 }

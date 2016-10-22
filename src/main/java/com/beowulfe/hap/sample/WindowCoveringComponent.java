@@ -51,6 +51,7 @@ public class WindowCoveringComponent implements WindowCovering {
         this.targetPosition = i;
         setChanged(tarPosCallback);
         state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING : WindowCoveringPositionState.DECREASING;
+        setChanged(posStateCallback);
         return CompletableFuture.runAsync(go);
     }
 
@@ -135,11 +136,15 @@ public class WindowCoveringComponent implements WindowCovering {
     }
 
     Runnable go = () -> {
-        log.info(String.format("Running from %s to %s", currentPosition, targetPosition));
-        StepperMotorService.getInstance().rotate(targetPosition - currentPosition);
-        this.currentPosition = this.targetPosition;
-        setChanged(curPosCallback);
-        setState(WindowCoveringPositionState.STOPPED);
-        setChanged(posStateCallback);
+        if (targetPosition != currentPosition) {
+            log.info(String.format("Running from %s to %s", currentPosition, targetPosition));
+            StepperMotorService.getInstance().rotate(targetPosition - currentPosition);
+            this.currentPosition = this.targetPosition;
+            setChanged(curPosCallback);
+            setState(WindowCoveringPositionState.STOPPED);
+            setChanged(posStateCallback);
+        } else {
+            log.info("targetPosition == currentPosition");
+        }
     };
 }
