@@ -1,5 +1,12 @@
 Manifest-Version: 1.0
 Built-By: mgavlovy
+Class-Path: hap-1.1.4-SNAPSHOT.jar netty-all-4.0.32.Final.jar srp6a-1.
+ 5.2.jar bcprov-jdk15on-1.51.jar ecc-25519-java-1.0.1.jar curve25519-j
+ ava-0.1.0.jar javax.json-api-1.0.jar javax.json-1.0.4.jar jmdns-3.4.1
+ .jar commons-io-2.4.jar log4j-1.2.16.jar pi4j-core-1.1.jar pi4j-devic
+ e-1.1.jar pi4j-gpio-extension-1.1.jar slf4j-api-1.7.21.jar slf4j-simp
+ le-1.7.21.jar
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_40
+Main-Class: com.beowulfe.hap.sample.Main
 
