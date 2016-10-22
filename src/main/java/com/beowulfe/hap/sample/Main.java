@@ -12,7 +12,7 @@ public class Main {
         log.info("Starting application");
 		try {
             if (true) {
-
+                StepperMotorGpioExample.main(null);
             } else {
                 HomekitServer homeKit = new HomekitServer(PORT);
                 HomekitRoot bridge = homeKit.createBridge(new RaspiBridgeAuthInfo(), "Test Bridge", "TestBridge, Inc.", "G6", "111abe234");
