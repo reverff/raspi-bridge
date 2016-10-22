@@ -3,10 +3,12 @@ package com.beowulfe.hap.sample;
 import com.beowulfe.hap.HomekitCharacteristicChangeCallback;
 import com.beowulfe.hap.accessories.WindowCovering;
 import com.beowulfe.hap.accessories.properties.WindowCoveringPositionState;
+import org.apache.log4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
 
 public class WindowCoveringComponent implements WindowCovering {
+    private static final Logger log = Logger.getLogger(WindowCoveringComponent.class);
 
     private Integer currentPosition = 0;
     private Integer targetPosition = 100;
@@ -48,7 +50,7 @@ public class WindowCoveringComponent implements WindowCovering {
     public CompletableFuture<Void> setTargetPosition(int i) throws Exception {
         this.targetPosition = i;
         setChanged(tarPosCallback);
-        state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING :WindowCoveringPositionState.DECREASING;
+        state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING : WindowCoveringPositionState.DECREASING;
         return CompletableFuture.runAsync(go);
     }
 
@@ -133,7 +135,8 @@ public class WindowCoveringComponent implements WindowCovering {
     }
 
     Runnable go = () -> {
-        System.out.println(String.format("Running from %s to %s", currentPosition, targetPosition));
+        log.info(String.format("Running from %s to %s", currentPosition, targetPosition));
+        StepperMotorService.getInstance().rotate(targetPosition - currentPosition);
         this.currentPosition = this.targetPosition;
         setChanged(curPosCallback);
         setState(WindowCoveringPositionState.STOPPED);

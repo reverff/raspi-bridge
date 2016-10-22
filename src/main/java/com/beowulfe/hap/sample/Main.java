@@ -11,14 +11,10 @@ public class Main {
 	public static void main(String[] args) {
         log.info("Starting application");
 		try {
-            if (true) {
-                StepperMotorGpioExample.main(null);
-            } else {
                 HomekitServer homeKit = new HomekitServer(PORT);
                 HomekitRoot bridge = homeKit.createBridge(new RaspiBridgeAuthInfo(), "Test Bridge", "TestBridge, Inc.", "G6", "111abe234");
                 bridge.addAccessory(new WindowCoveringComponent());
                 bridge.start();
-            }
 		} catch (Exception e) {
             log.error(e.getMessage(), e);
 		}
