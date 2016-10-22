@@ -14,7 +14,7 @@ public class Main {
 	
 	public static void main(String[] args) throws UnknownHostException {
         log.info("Starting application");
-        InetAddress address = Inet4Address.getLocalHost();
+        InetAddress address = Inet4Address.getByName("192.168.1.50");
         log.info("Current environment: " + address.getHostName() + " - " + address.getHostAddress() + " | " + address.getClass().getSimpleName());
 		try {
                 HomekitServer homeKit = new HomekitServer(address, PORT);
