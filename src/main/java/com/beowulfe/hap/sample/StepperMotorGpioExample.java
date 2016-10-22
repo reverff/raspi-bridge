@@ -2,6 +2,7 @@ package com.beowulfe.hap.sample;
 
 import com.pi4j.component.motor.impl.GpioStepperMotorComponent;
 import com.pi4j.io.gpio.*;
+import org.apache.log4j.Logger;
 
 /**
  * This example code demonstrates how to control a stepper motor
@@ -9,10 +10,11 @@ import com.pi4j.io.gpio.*;
  *
  * @author Robert Savage
  */
-public class StepperMotorGpioExample
-{
-    public static void main(String[] args) throws InterruptedException
-    {
+public class StepperMotorGpioExample {
+    private static final Logger log = Logger.getLogger(StepperMotorGpioExample.class);
+
+    public static void main(String[] args) throws InterruptedException {
+        log.info("<--Pi4J--> GPIO Stepper Motor Example ... started.");
         System.out.println("<--Pi4J--> GPIO Stepper Motor Example ... started.");
 
         // create gpio controller
@@ -20,10 +22,10 @@ public class StepperMotorGpioExample
 
         // provision gpio pins #00 to #03 as output pins and ensure in LOW state
         final GpioPinDigitalOutput[] pins = {
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_10, PinState.LOW),
                 gpio.provisionDigitalOutputPin(RaspiPin.GPIO_11, PinState.LOW),
                 gpio.provisionDigitalOutputPin(RaspiPin.GPIO_12, PinState.LOW),
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_13, PinState.LOW),
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_15, PinState.LOW)};
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_14, PinState.LOW)};
 
         // this will ensure that the motor is stopped when the program terminates
         gpio.setShutdownOptions(true, PinState.LOW, pins);
