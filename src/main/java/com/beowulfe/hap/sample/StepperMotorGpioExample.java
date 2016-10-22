@@ -22,10 +22,10 @@ public class StepperMotorGpioExample {
 
         // provision gpio pins #00 to #03 as output pins and ensure in LOW state
         final GpioPinDigitalOutput[] pins = {
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_10, PinState.LOW),
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_11, PinState.LOW),
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_12, PinState.LOW),
-                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_14, PinState.LOW)};
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, PinState.LOW)};
 
         // this will ensure that the motor is stopped when the program terminates
         gpio.setShutdownOptions(true, PinState.LOW, pins);
