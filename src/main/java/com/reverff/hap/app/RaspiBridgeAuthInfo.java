@@ -8,11 +8,10 @@ import java.util.concurrent.ConcurrentMap;
 import com.beowulfe.hap.HomekitAuthInfo;
 import com.beowulfe.hap.HomekitServer;
 import com.reverff.hap.model.HapBridgeInfoBean;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -54,6 +53,7 @@ public class RaspiBridgeAuthInfo implements HomekitAuthInfo {
 
     private Node getElementFromXml(Document doc, String nodeName) {
         NodeList nList = doc.getElementsByTagName(nodeName);
+        log.info("Found element [" + nodeName + "] vith value [" + nList.item(0).getTextContent() + "]");
         return nList.item(0);
     }
 
@@ -93,14 +93,24 @@ public class RaspiBridgeAuthInfo implements HomekitAuthInfo {
         return param;
     }
 
+    private String getCharacterDataFromElement(Node n) {
+        Node child = n.getFirstChild();
+        if (child instanceof CharacterData) {
+            CharacterData cd = (CharacterData) child;
+            return cd.getData();
+        }
+        return "";
+    }
+
     private String defineKey(Document doc) throws Exception {
-        Node nodeKey = getElementFromXml(doc, "mac");
+        Node nodeKey = getElementFromXml(doc, "privateKey");
         String param;
         if (StringUtils.isNotBlank(nodeKey.getTextContent())) {
-            param = nodeKey.getTextContent();
+            param = getCharacterDataFromElement(nodeKey);
         } else {
             param = new String(HomekitServer.generateKey());
-            nodeKey.setTextContent(param);
+            Node cdata = doc.createCDATASection(param);
+            nodeKey.appendChild(cdata);
             updateXml(doc);
             log.info("Updated with key value = " + param);
         }

@@ -10,7 +10,7 @@
         <property name="manufacturer" value="Maksym Gavlovych" />
         <property name="model" value="RaspiBridge" />
         <property name="serial" value="001" />
-        <property name="authFile" value="" />
+        <property name="authFile" value="D:\eclipse_workspace\Development\raspi-bridge\auth\auth-info.xml" />
     </bean>
 
     <bean id="windowCovering" class="com.reverff.hap.model.WindowCoveringInfoBean">
