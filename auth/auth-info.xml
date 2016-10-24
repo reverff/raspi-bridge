@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><authentification>
     <pin>004-02-994</pin>
-    <mac>fe:30:1e:8a:53:e2</mac>
-    <salt>-19893191891426574497974986380461912575</salt>
-    <privateKey><![CDATA[]]]>&#30;<![CDATA[�k�=�[��V�{���]]>&#5;<![CDATA[�!%z]]>&#20;<![CDATA[^kJ`]]>&#20;&#21;<![CDATA[�]]>&#18;&#28;</privateKey>
+    <mac></mac>
+    <salt></salt>
+    <privateKey></privateKey>
 </authentification>
