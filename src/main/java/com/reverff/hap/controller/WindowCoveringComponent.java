@@ -1,14 +1,22 @@
-package com.beowulfe.hap.sample;
+package com.reverff.hap.controller;
 
 import com.beowulfe.hap.HomekitCharacteristicChangeCallback;
 import com.beowulfe.hap.accessories.WindowCovering;
 import com.beowulfe.hap.accessories.properties.WindowCoveringPositionState;
+import com.reverff.hap.model.WindowCoveringInfoBean;
 import org.apache.log4j.Logger;
 
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 public class WindowCoveringComponent implements WindowCovering {
     private static final Logger log = Logger.getLogger(WindowCoveringComponent.class);
+
+    private int id;
+    private String label;
+    private String manufacturer;
+    private String model;
+    private String serial;
 
     private Integer currentPosition = 0;
     private Integer targetPosition = 100;
@@ -16,7 +24,16 @@ public class WindowCoveringComponent implements WindowCovering {
     private HomekitCharacteristicChangeCallback curPosCallback;
     private HomekitCharacteristicChangeCallback tarPosCallback;
     private HomekitCharacteristicChangeCallback posStateCallback;
-    private HomekitCharacteristicChangeCallback obsDecCallback;
+    protected HomekitCharacteristicChangeCallback obsDecCallback;
+
+    public WindowCoveringComponent(WindowCoveringInfoBean info) {
+        super();
+        this.id = info.getId();
+        this.label = info.getLabel();
+        this.manufacturer = info.getManufacturer();
+        this.model = info.getModel();
+        this.serial = info.getSerial();
+    }
 
     private void setChanged(HomekitCharacteristicChangeCallback callback) {
         if (callback != null) {
@@ -49,7 +66,7 @@ public class WindowCoveringComponent implements WindowCovering {
     @Override
     public CompletableFuture<Void> setTargetPosition(int i) throws Exception {
         this.targetPosition = i;
-        if (targetPosition != currentPosition) {
+        if (!Objects.equals(targetPosition, currentPosition)) {
             setChanged(tarPosCallback);
             state = targetPosition > currentPosition ? WindowCoveringPositionState.INCREASING : WindowCoveringPositionState.DECREASING;
             setChanged(posStateCallback);
@@ -105,12 +122,12 @@ public class WindowCoveringComponent implements WindowCovering {
 
     @Override
     public int getId() {
-        return 421994;
+        return id;
     }
 
     @Override
     public String getLabel() {
-        return "WindowCovering";
+        return label;
     }
 
     @Override
@@ -120,17 +137,17 @@ public class WindowCoveringComponent implements WindowCovering {
 
     @Override
     public String getSerialNumber() {
-        return "1111";
+        return serial;
     }
 
     @Override
     public String getModel() {
-        return "null";
+        return model;
     }
 
     @Override
     public String getManufacturer() {
-        return "null";
+        return manufacturer;
     }
 
     public void setState(WindowCoveringPositionState state) {
@@ -138,7 +155,7 @@ public class WindowCoveringComponent implements WindowCovering {
     }
 
     Runnable go = () -> {
-        if (targetPosition != currentPosition) {
+        if (!Objects.equals(targetPosition, currentPosition)) {
             log.info(String.format("Running from %s to %s", currentPosition, targetPosition));
             StepperMotorService.getInstance().rotate(targetPosition - currentPosition);
             this.currentPosition = this.targetPosition;

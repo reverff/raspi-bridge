@@ -1,4 +1,4 @@
-package com.beowulfe.hap.sample;
+package com.reverff.hap.controller;
 
 import com.pi4j.component.motor.impl.GpioStepperMotorComponent;
 import com.pi4j.io.gpio.*;
@@ -41,6 +41,7 @@ public class StepperMotorService {
         Double stepCount = STEPS_FOR_COMPLETE / 100 * delta;
         log.info("Step count for this time: " + stepCount.intValue());
         motor.step(stepCount.intValue());
+        motor.stop();
     }
 
 }

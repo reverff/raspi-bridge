@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="homeKitBridge" class="com.reverff.hap.model.HapBridgeInfoBean">
+        <property name="host" value="192.168.1.50" />
+        <property name="port" value="8080" />
+        <property name="label" value="mGavlovy HomeKit bridge" />
+        <property name="manufacturer" value="Maksym Gavlovych" />
+        <property name="model" value="RaspiBridge" />
+        <property name="serial" value="001" />
+        <property name="authFile" value="" />
+    </bean>
+
+    <bean id="windowCovering" class="com.reverff.hap.model.WindowCoveringInfoBean">
+        <property name="id" value="421994" />
+        <property name="label" value="Window Covering" />
+        <property name="manufacturer" value="Maksym Gavlovych" />
+        <property name="model" value="RaspiBridge" />
+        <property name="serial" value="001" />
+    </bean>
+
+</beans>
